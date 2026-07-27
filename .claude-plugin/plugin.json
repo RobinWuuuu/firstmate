@@ -1,0 +1,10 @@
+{
+  "name": "firstmate",
+  "description": "Multi-agent orchestration — spawn crewmate agents into isolated tmux+worktree sessions. The first mate dispatches work, supervises progress, and reports outcomes. Skills: afk (step away with an auto-brief), updatefirstmate (fast-forward the orchestration repo from origin).",
+  "version": "0.1.0",
+  "author": {
+    "name": "Robin Wu",
+    "email": "wu.robin@bcg.com"
+  },
+  "license": "MIT"
+}
