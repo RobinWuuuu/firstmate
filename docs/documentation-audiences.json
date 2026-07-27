@@ -113,11 +113,19 @@
       "audience": "agent-runtime"
     },
     {
+      "path": ".agents/skills/agent-skill-trigger-index/SKILL.md",
+      "audience": "agent-runtime"
+    },
+    {
       "path": ".agents/skills/ahoy/SKILL.md",
       "audience": "agent-runtime"
     },
     {
       "path": ".agents/skills/ask-user-authority/SKILL.md",
+      "audience": "agent-runtime"
+    },
+    {
+      "path": ".agents/skills/away-quiet-supervision/SKILL.md",
       "audience": "agent-runtime"
     },
     {
@@ -229,6 +237,10 @@
       "audience": "agent-runtime"
     },
     {
+      "path": ".agents/skills/operational-home-layout/SKILL.md",
+      "audience": "agent-runtime"
+    },
+    {
       "path": ".agents/skills/process-event-sources/SKILL.md",
       "audience": "agent-runtime"
     },
@@ -245,7 +257,19 @@
       "audience": "agent-runtime"
     },
     {
+      "path": ".agents/skills/scout-completion/SKILL.md",
+      "audience": "agent-runtime"
+    },
+    {
       "path": ".agents/skills/secondmate-provisioning/SKILL.md",
+      "audience": "agent-runtime"
+    },
+    {
+      "path": ".agents/skills/session-start-recovery/SKILL.md",
+      "audience": "agent-runtime"
+    },
+    {
+      "path": ".agents/skills/ship-landing/SKILL.md",
       "audience": "agent-runtime"
     },
     {
@@ -258,6 +282,10 @@
     },
     {
       "path": ".agents/skills/updatefirstmate/SKILL.md",
+      "audience": "agent-runtime"
+    },
+    {
+      "path": ".agents/skills/validation-supervision/SKILL.md",
       "audience": "agent-runtime"
     },
     {
@@ -309,6 +337,10 @@
       "audience": "operator-current"
     },
     {
+      "path": "docs/captain-hold-lifecycle.md",
+      "audience": "maintainer-architecture"
+    },
+    {
       "path": "docs/cd-guard.md",
       "audience": "maintainer-architecture"
     },
@@ -325,15 +357,11 @@
       "audience": "operator-current"
     },
     {
-      "path": "docs/captain-hold-lifecycle.md",
-      "audience": "maintainer-architecture"
+      "path": "docs/crew-claude.md",
+      "audience": "agent-runtime"
     },
     {
       "path": "docs/documentation-audiences.md",
-      "audience": "maintainer-architecture"
-    },
-    {
-      "path": "docs/extension-bindings.md",
       "audience": "maintainer-architecture"
     },
     {
@@ -357,6 +385,14 @@
       "audience": "operator-example"
     },
     {
+      "path": "docs/extension-bindings.md",
+      "audience": "maintainer-architecture"
+    },
+    {
+      "path": "docs/fleet-ledger.md",
+      "audience": "operator-current"
+    },
+    {
       "path": "docs/fm-test-isolation-proof.md",
       "audience": "maintainer-verification"
     },
@@ -375,10 +411,6 @@
     {
       "path": "docs/gitlab-merge-watch.md",
       "audience": "maintainer-verification"
-    },
-    {
-      "path": "docs/fleet-ledger.md",
-      "audience": "operator-current"
     },
     {
       "path": "docs/herdr-backend.md",
@@ -401,12 +433,12 @@
       "audience": "operator-current"
     },
     {
-      "path": "docs/secondmate-parent-channel.md",
-      "audience": "maintainer-architecture"
-    },
-    {
       "path": "docs/scripts.md",
       "audience": "operator-current"
+    },
+    {
+      "path": "docs/secondmate-parent-channel.md",
+      "audience": "maintainer-architecture"
     },
     {
       "path": "docs/sessionstart-nudge.md",
@@ -414,6 +446,10 @@
     },
     {
       "path": "docs/subagent-guard.md",
+      "audience": "maintainer-architecture"
+    },
+    {
+      "path": "docs/supervision-host.md",
       "audience": "maintainer-architecture"
     },
     {
@@ -451,10 +487,6 @@
     {
       "path": "docs/supervision-protocols/unknown.md",
       "audience": "agent-runtime"
-    },
-    {
-      "path": "docs/supervision-host.md",
-      "audience": "maintainer-architecture"
     },
     {
       "path": "docs/tmux-backend.md",
@@ -547,34 +579,6 @@
     {
       "path": "tests/captures/no-mistakes-v1.70.1/README.md",
       "audience": "maintainer-verification"
-    },
-    {
-      "path": ".agents/skills/agent-skill-trigger-index/SKILL.md",
-      "audience": "agent-runtime"
-    },
-    {
-      "path": ".agents/skills/away-quiet-supervision/SKILL.md",
-      "audience": "agent-runtime"
-    },
-    {
-      "path": ".agents/skills/operational-home-layout/SKILL.md",
-      "audience": "agent-runtime"
-    },
-    {
-      "path": ".agents/skills/scout-completion/SKILL.md",
-      "audience": "agent-runtime"
-    },
-    {
-      "path": ".agents/skills/session-start-recovery/SKILL.md",
-      "audience": "agent-runtime"
-    },
-    {
-      "path": ".agents/skills/ship-landing/SKILL.md",
-      "audience": "agent-runtime"
-    },
-    {
-      "path": ".agents/skills/validation-supervision/SKILL.md",
-      "audience": "agent-runtime"
     }
   ]
 }

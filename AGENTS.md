@@ -393,6 +393,8 @@ Load `secondmate-provisioning` before creating or using a charter brief and pres
 Status appends are sparse supervisor-actionable events, not routine progress; `bin/fm-classify-lib.sh` owns keyed open and resolved semantics.
 The scaffold is a safety contract, not a suggestion.
 
+When a crewmate or scout is spawned into a firstmate-repo worktree, `bin/fm-spawn.sh` replaces the worktree's `CLAUDE.md` symlink with `docs/crew-claude.md`, a lean ~30-line instruction file; `bin/fm-teardown.sh` resets it before the worktree returns to the pool.
+
 ## 12. Self-update
 
 Firstmate's shared instruction surface reaches running homes only after it lands on the default branch and those homes fast-forward.

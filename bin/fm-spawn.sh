@@ -4775,6 +4775,14 @@ EOF
     exclude_path '.fm-kimi-turnend'
     ;;
   esac
+  # For firstmate-repo worktrees: swap CLAUDE.md symlink for the lean crew instruction file
+  # so crewmates load ~30 lines instead of the full AGENTS.md.
+  # skip-worktree keeps git status clean; fm-teardown resets this before returning to pool.
+  if head -1 "$WT/AGENTS.md" 2>/dev/null | grep -qF '# Firstmate'; then
+    git -C "$WT" update-index --skip-worktree CLAUDE.md
+    rm -f "$WT/CLAUDE.md"
+    cp "$FM_ROOT/docs/crew-claude.md" "$WT/CLAUDE.md"
+  fi
 fi
 
 # Per-task git hooksPath that strips AI commit trailers at the commit object.

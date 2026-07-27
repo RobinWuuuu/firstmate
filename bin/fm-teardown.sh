@@ -3269,6 +3269,10 @@ cleanup_firstmate_home_children() {
         rm -f "$child_wt/.claude/settings.local.json" "$child_wt/.opencode/plugins/fm-turn-end.js" \
           "$child_wt/.opencode/plugins/fm-busy-state.js" \
           "$child_wt/.fm-grok-turnend" "$child_wt/.fm-kimi-turnend"
+        if head -1 "$child_wt/AGENTS.md" 2>/dev/null | grep -qF '# Firstmate'; then
+          git -C "$child_wt" update-index --no-skip-worktree CLAUDE.md 2>/dev/null || true
+          git -C "$child_wt" checkout -- CLAUDE.md 2>/dev/null || true
+        fi
         if [ -n "$child_proj" ] && [ -d "$child_proj" ] && command -v treehouse >/dev/null 2>&1; then
           if teardown_treehouse_return "$child_wt" "$child_proj" "child worktree"; then
             fm_treehouse_slot_owner_release "$child_wt" "$child_id"
