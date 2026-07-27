@@ -220,6 +220,10 @@
       "audience": "operator-current"
     },
     {
+      "path": "docs/crew-claude.md",
+      "audience": "agent-runtime"
+    },
+    {
       "path": "docs/decision-hold-lifecycle.md",
       "audience": "maintainer-architecture"
     },

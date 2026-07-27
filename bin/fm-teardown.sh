@@ -1018,6 +1018,10 @@ cleanup_firstmate_home_children() {
       validate_child_worktree_for_removal "$child_wt" "$child_proj" >/dev/null || return 1
       rm -f "$child_wt/.claude/settings.local.json" "$child_wt/.opencode/plugins/fm-turn-end.js" \
         "$child_wt/.fm-grok-turnend" "$child_wt/.fm-kimi-turnend"
+      if head -1 "$child_wt/AGENTS.md" 2>/dev/null | grep -qF '# Firstmate'; then
+        git -C "$child_wt" update-index --no-skip-worktree CLAUDE.md 2>/dev/null || true
+        git -C "$child_wt" checkout -- CLAUDE.md 2>/dev/null || true
+      fi
       if [ -n "$child_proj" ] && [ -d "$child_proj" ] && command -v treehouse >/dev/null 2>&1; then
         if teardown_treehouse_return "$child_wt" "$child_proj" "child worktree"; then
           :
@@ -1142,6 +1146,11 @@ elif [ -d "$WT" ] && [ "$KIND" != secondmate ]; then
   # Remove our hook file so a reused pool worktree cannot fire signals for a dead task.
   rm -f "$WT/.claude/settings.local.json" "$WT/.opencode/plugins/fm-turn-end.js" \
     "$WT/.fm-grok-turnend" "$WT/.fm-kimi-turnend"
+  # Reset the lean CLAUDE.md swap (fm-spawn.sh) so the next task gets a pristine symlink.
+  if head -1 "$WT/AGENTS.md" 2>/dev/null | grep -qF '# Firstmate'; then
+    git -C "$WT" update-index --no-skip-worktree CLAUDE.md 2>/dev/null || true
+    git -C "$WT" checkout -- CLAUDE.md 2>/dev/null || true
+  fi
   # Kills remaining processes in the worktree (including the agent), resets, returns
   # to pool. treehouse resolves the pool from the working directory, so run it from
   # the project. teardown_treehouse_return tolerates transient and stale git locks
